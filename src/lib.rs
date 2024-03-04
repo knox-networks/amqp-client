@@ -12,6 +12,10 @@ use lapin::{
 use tokio::sync::{mpsc, mpsc::UnboundedSender};
 use tracing::*;
 
+#[doc = include_str!("../README.md")]
+#[cfg(doctest)]
+pub struct ReadmeDoctests;
+
 #[derive(Debug, thiserror::Error)]
 #[error("AmqpError")]
 pub struct AmqpError;
