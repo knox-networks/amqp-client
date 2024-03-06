@@ -262,7 +262,7 @@ checksum = "9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567"
 [[package]]
 name = "bigerror"
 version = "0.6.0"
-source = "git+https://github.com/knox-networks/bigerror?rev=a4c0f10#a4c0f1080d5edc46221fbf3b0d15ce55fef177eb"
+source = "git+https://github.com/knox-networks/bigerror?rev=999dbde#999dbde4558332107078adaa572b07c1ef9a6aba"
 dependencies = [
  "error-stack",
  "thiserror",
