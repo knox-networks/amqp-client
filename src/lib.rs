@@ -1,6 +1,6 @@
 use std::{env, future::Future, io, time::Duration};
 
-use bigerror::{LogError, Report, ReportAs};
+use bigerror::{LogError, Report, ReportAs, ThinContext};
 use futures_util::StreamExt;
 use lapin::{
     options::{BasicAckOptions, BasicConsumeOptions, BasicPublishOptions, QueueDeclareOptions},
@@ -16,10 +16,8 @@ use tracing::*;
 #[cfg(doctest)]
 pub struct ReadmeDoctests;
 
-#[derive(Debug, thiserror::Error)]
-#[error("AmqpError")]
+#[derive(ThinContext)]
 pub struct AmqpError;
-bigerror::reportable!(AmqpError);
 
 #[derive(Debug, Clone)]
 pub struct AmqpConnectionConfig {
